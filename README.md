@@ -6,4 +6,4 @@
 สามารถโคลนได้ที่ https://github.com/Waranyalakh/Practices.git
 
 ##โดยใช้คำสั่ง 
-```git clone https://github.com/Waranyalakh/Practices.git
+```bash git clone https://github.com/Waranyalakh/Practices.git
