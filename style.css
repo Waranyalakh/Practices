@@ -283,7 +283,7 @@ button:hover{
 .contact-info{
   display: flex;
   justify-content: space-between;
-  width: 50%;
+  width: 100%;
   max-width: 300px;
   padding: 40px;
   text-align: left;
@@ -319,16 +319,19 @@ button:hover{
   display: flex;
   /* gap: 0px; */
   margin-bottom: 10px;
+  flex-wrap: wrap;
 }
 .input1{
   flex: 1;
   padding: 6px;
+  /* flex-wrap: wrap; */
 
 }
 .input2{
   width: 100%;
   padding: 6px;
   box-sizing: border-box;
+  /* flex-wrap: wrap; */
 }
 
 .cantact-con{
@@ -435,6 +438,9 @@ button:hover{
   width: 100%;
   border: none;
   color: white;
+}
+.inputMFB:hover{
+  background-color: gray;
 }
 .btnAndLink{
   margin-top: 10px;
