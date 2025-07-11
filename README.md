@@ -4,5 +4,6 @@
 ได้เรียนรู้ tag ต่างๆใน HTML ได้เรียนรู้เกี่ยวกับการเอา javaScript มาควบคุมใน HTML และการใช้ CSS ในการตกแต่งหน้าเว็บ
 
 สามารถโคลนได้ที่ https://github.com/Waranyalakh/Practices.git
-โดยใช้คำสั่ง 
-git clone https://github.com/Waranyalakh/Practices.git
+
+##โดยใช้คำสั่ง 
+```git clone https://github.com/Waranyalakh/Practices.git
