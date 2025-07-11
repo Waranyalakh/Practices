@@ -1,0 +1,433 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+/* style="justify-content: space-between */
+#nav-desktop {
+  /* display: flex; */
+  justify-content: space-between;
+  /* align-items: center; ช่วยให้แนวเดียวกันแนวดิ่ง */
+}
+
+a{
+  text-decoration: none;
+  color: gray;
+}
+.dropdown{
+  
+  /* display: none; */
+  position: relative;
+  display: flex;
+}
+.dropdown-content{
+  display: none;
+  position: absolute;
+  /* background-color: white; */
+
+  color: black;
+  min-width: 160px;
+  padding: 12px 16px;
+  z-index: 1;
+  margin-top: 25px;
+
+}
+.dropdown:hover .dropdown-content{
+  display: block;
+  /* color: black; */
+}
+.link2{
+  display: flex;
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  background-color: white;
+  border: none;
+
+}
+.link2:hover{
+  background-color: gray;
+  color: white;
+}
+
+.link {
+  padding: 5px;
+  color: white;
+  text-decoration: none;
+}
+.link:hover {
+  background-color: gray;
+  color: black;
+}
+#title-banner {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  text-align: center;
+  
+  
+}
+.text1 {
+  margin-top: 40px;
+  text-align: center;
+}
+.text2 {
+  text-align: center;
+  font-weight: normal;
+}
+.text-theband {
+  
+  text-align: justify;
+  margin-top: 30px;
+  width: 100%;
+  max-width: 700px;
+  margin: 30px auto 0 auto;
+  
+  
+}
+
+.con-Box{
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: center;
+}
+.Box{
+  color: grey;
+  /* background-color: white; */
+  width: 500px;
+  flex-wrap: wrap;  
+  
+  
+
+}
+
+.box1{
+  padding: 16px;
+  border: 0.5px solid rgb(211, 211, 211);
+  flex-wrap: wrap;
+  background-color: white;
+  /* transform: translateX(50%); */
+  margin: 0 auto;
+  
+}
+.text-month{
+  display: inline-block;
+  color:grey;
+  margin-right: 20px;
+
+}
+.text-Sold-out{
+  display: inline-block;
+  background-color: red;
+  color: white;
+  padding: 5px;
+  text-align: center;
+}
+.text-num{
+  display: inline-block;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  width: 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+
+.image-container {
+  display: inline-block;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  transform: translateX(50%)
+  
+
+}
+
+.toure-dates-container {
+  background-color: black;
+  align-items: center;
+  justify-content: center;
+  padding:30px;
+
+}
+
+.toure-dates-container h2 {
+  text-align: center;
+  color: grey;
+  margin-bottom: 10px;
+}
+
+.img-containner{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 10px;
+}
+.card-img1, .card-img2, .card-img3{
+  margin-top: 30px;
+  text-align: center;
+}
+
+
+
+
+.card2{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1px;
+  justify-content: center;
+}
+
+.card-contain{
+  width: 100%;
+  max-width: 400px;
+  /* padding: 10px; */
+  /* box-sizing: border-box; */
+
+}
+
+.contain-img{
+  margin-top: 40px;
+  background-color: white;
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 300px;
+}
+
+.img-style{
+  width: 100%; 
+  max-width: 300px; 
+  height: auto;
+}
+
+.card-contain-text{
+  padding: 16px;
+  
+}
+.btn button{
+
+  display: flex; 
+  justify-content: flex-end; 
+  color: white;
+  background-color: black;
+  padding: 8px 20px;
+  border: none;
+  cursor: pointer;
+ 
+
+
+}
+
+button:hover{
+  background-color: grey;
+  color: black;
+  border: none;
+}
+
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 50%;
+    margin: 6px 0;
+  }
+}
+
+.contain-contact{
+  text-align: center;
+  padding: 40px;
+}
+
+.contact-info{
+  width: 50%;
+  max-width: 300px;
+  padding: 40px;
+  text-align: left;
+  
+}
+.ul-list{
+  list-style: none;
+}
+.con-f{
+  width: 50%;
+  max-width: 400px;
+  padding: 20px;
+  text-align: right; 
+}
+.row{
+  display: flex;
+  /* gap: 0px; */
+  margin-bottom: 10px;
+}
+.input1{
+  flex: 1;
+  padding: 6px;
+
+}
+.input2{
+  width: 100%;
+  padding: 6px;
+  box-sizing: border-box;
+}
+.btn-sub{
+  margin-top: 10px;
+  
+  border: none;
+  background: black;
+  color: white;
+  padding: 10px;
+}
+
+.cantact-con{
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.text-contact2{
+  color: grey;
+  padding: 15px;
+}
+.footer-contain{
+  padding: 80px;
+}
+.text-footer{
+  align-items: center;
+  text-align: center;
+  color: grey;
+}
+.contain-icon{
+  text-align: center;
+}
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  
+}
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  /* padding: 20px; */
+  border: 1px solid #888;
+  width: 50%;
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  color: #aaaaaa;
+  float: right;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-from{
+  max-width: 800px;
+  align-items: center;
+  padding: 10px;
+  
+}
+.labelMF{
+  color: black;
+}
+.inputMF{
+  width: 100%;
+  border: 1px solid grey;
+  padding: 10px;
+  margin-bottom: 10px; 
+}
+.headF{
+  background-color: rgb(7, 165, 142);
+  padding: 40px;
+  color: white;
+
+  text-align: center;
+  gap: 8px;
+}
+.LinkHMF{
+  margin-right: 10px;
+
+}
+.HMF{
+  display: inline;
+}
+.inputMFB{
+  background-color:  rgb(7, 165, 142);
+  padding: 10px;
+  width: 100%;
+  border: none;
+  color: white;
+}
+.btnAndLink{
+  margin-top: 10px;
+  padding: 10px;
+}
+.btnMF{
+  padding: 8px;
+  border: none;
+  background-color: red;
+  /* margin-top: 10px; */
+}
+.LinkNeedHMF{
+  /* justify-content: flex-end; */
+  color: blue;
+ 
+}
+.HelpLink{
+  
+  float: right;
+}
+.aMF{
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.ticketsL{
+  color: white;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+
+  
+}
