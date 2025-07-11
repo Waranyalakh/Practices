@@ -447,35 +447,35 @@
     
    
     function handleResize() {
-        const navDesktop = document.getElementById("nav-desktop");
-        const navMobile = document.getElementById("nav-mobile");
-        const titleBanner = document.getElementById("title-banner");
+      const navDesktop = document.getElementById("nav-desktop");
+      const navMobile = document.getElementById("nav-mobile");
+      const titleBanner = document.getElementById("title-banner");
 
-        if (window.innerWidth < 768) {
-          navDesktop.style.display = "none";
-          navMobile.style.display = "flex";
-          if (titleBanner) titleBanner.style.display = "none";
-        } else {
-          navDesktop.style.display = "flex";
-          navMobile.style.display = "none";
-          if (titleBanner) titleBanner.style.display = "flex";
-        }
+      if (window.innerWidth < 768) {
+        navDesktop.style.display = "none";
+        navMobile.style.display = "flex";
+        if (titleBanner) titleBanner.style.display = "none";
+      } else {
+        navDesktop.style.display = "flex";
+        navMobile.style.display = "none";
+        if (titleBanner) titleBanner.style.display = "block";
       }
-
-    const modal = document.getElementById("myModal");
-    const closeBtn = document.querySelector(".close");
-
-    const buttons = document.querySelectorAll(".myBtn")
-
-    for(let i = 0; i < buttons.length; i++){
-        buttons[i].onclick = function(){
-            modal.style.display = "block";
-        }
     }
+
+    // const modal = document.getElementById("myModal");
+    // const closeBtn = document.querySelector(".close");
+
+    // const buttons = document.querySelectorAll(".myBtn")
+
+    // for(let i = 0; i < buttons.length; i++){
+    //     buttons[i].onclick = function(){
+    //         modal.style.display = "block";
+    //     }
+    // }
     
-    closeBtn.onclick = function(){
-        modal.style.display = "none"
-    }
+    // closeBtn.onclick = function(){
+    //     modal.style.display = "none"
+    // }
 
  
 
