@@ -13,10 +13,10 @@
         <nav>
             <div id="nav-desktop">
                 <div class="nav-left">
-                    <a href="#" class="link">HOME</a>
-                    <a href="#" class="link">BAND</a>
-                    <a href="#" class="link">TOUR</a>
-                    <a href="#" class="link">CONTACT</a>
+                    <a href="#HOME" class="link">HOME</a>
+                    <a href="#title-theband" class="link">BAND</a>
+                    <a href="#TOUR" class="link">TOUR</a>
+                    <a href="#CONTACT" class="link">CONTACT</a>
                     <div class="dropdown">
                         <a href="#" class="link">MORE</a>
                         <div class="dropdown-content" id="drop">
@@ -68,26 +68,29 @@
             </div>
         </nav>
         <!-- div img -->
-        <div>
-            <img
-                src="https://fastly.picsum.photos/id/22/4434/3729.jpg?hmac=fjZdkSMZJNFgsoDh8Qo5zdA_nSGUAWvKLyyqmEt2xs0"
-                alt
+        <div id="HOME">
+            <div id="banner">
+                <img
+                id="bannerImg"
+                src=""
+                alt="banner"
                 style="
                 width: 100%;
                 height: 100vh;
                 object-fit: cover;
                 position: relative;
                 " />
+            </div>
+            
             <div id="title-banner">
-                <h1>Chicago</h1>
-                <p>
-                    <strong>Thank you, Chicago - A night we won't
-                        forget.</strong>
+                <h1 id="bannerTitle">Title</h1>
+                <p id="bannerDesc">
+                    <strong>Description</strong>
                 </p>
             </div>
         </div>
 
-        <div id="title-theband">
+        <div id="title-theband" >
             <h1 class="text1">THE BAND</h1>
             <h2 class="text2"><i>We love music</i></h2>
             <div class="text-theband">
@@ -140,8 +143,8 @@
 
         </div>
         <!-- tour dates -->
-        <div class="toure-dates-container">
-            <h1 style="color: white; text-align: center; padding: 40px;">TOUR
+        <div class="toure-dates-container" id="TOUR">
+            <h1 style="color: white; text-align: center; padding: 20px;">TOUR
                 DATES</h1>
             <h2 style="font-size: 16px;"><i>Remember to book your
                     tickets!</i></h2><br>
@@ -188,10 +191,10 @@
                             alt
                             class="img-style">
                         <div class="card-contain-text" style="color: back;">
-                            <p>New York</p><br>
-                            <p style="color: grey;">Fri 27 Nov 2016</p><br>
-                            <p>Praesent tincidunt sed <br>tellus ut rutrum sed
-                                <br>vitae justo.</p><br>
+                            <p>Paris</p><br>
+                            <p style="color: grey;">Sat 28 Nov 2016</p><br>
+                            <p>Praesent tincidunt sed tellus ut
+                                <br>rutrum sed vitae justo.</p><br>
                             <div class="btn">
                                 <button class="myBtn">Buy Tickets</button>
                             </div>
@@ -206,10 +209,10 @@
                             alt
                             class="img-style">
                         <div class="card-contain-text" style="color: back;">
-                            <p>New York</p><br>
+                            <p>San Francisco</p><br>
                             <p style="color: grey;">Fri 27 Nov 2016</p><br>
-                            <p>Praesent tincidunt sed <br>tellus ut rutrum sed
-                                <br>vitae justo.</p><br>
+                            <p>Praesent tincidunt sed tellus ut
+                                <br>rutrum sed vitae justo.</p><br>
                             <div class="btn">
                                 <button class="myBtn">Buy Tickets</button>
                             </div>
@@ -279,7 +282,7 @@
 
         </div>
 
-        <div class="contain-contact">
+        <div class="contain-contact" id="CONTACT">
             <!-- about text -->
             <div class="text-contact1">
                 <h1>CONTACT</h1>
@@ -490,6 +493,54 @@
         }
         });
     });
+
+
+    // const bannerImages=[
+    //     img:'https://i.pinimg.com/736x/32/38/15/323815f47617e17e2c169b4fc5ddd09e.jpg',
+    //     'https://i.pinimg.com/736x/c6/36/f2/c636f29f5d24ef6b9b720fe4c48a9a46.jpg',
+    //     'https://i.pinimg.com/1200x/78/a5/11/78a5117a5cdd1dae9fc8da85cd0dd6d4.jpg'
+
+    // ];
+
+     const bannerData = [
+  {
+    image: 'https://i.pinimg.com/736x/32/38/15/323815f47617e17e2c169b4fc5ddd09e.jpg',
+    title: 'Chicago',
+    description: "Thank you, Chicago - A night we won't forget."
+  },
+  {
+    image: 'https://i.pinimg.com/736x/c6/36/f2/c636f29f5d24ef6b9b720fe4c48a9a46.jpg',
+    title: 'Los Angeles',
+    description: "We had the best time playing at Venice Beach!"
+  },
+  {
+    image: 'https://i.pinimg.com/1200x/78/a5/11/78a5117a5cdd1dae9fc8da85cd0dd6d4.jpg',
+    title: 'New York',
+    description: "The atmosphere in New York is lorem ipsum."
+  }
+];
+
+let current = 0;
+
+const imgElement = document.getElementById('bannerImg');
+const titleElement = document.getElementById('bannerTitle');
+const descElement = document.getElementById('bannerDesc');
+
+// ฟังก์ชันอัปเดตข้อมูล
+function updateBanner(index) {
+  imgElement.src = bannerData[index].image;
+  titleElement.innerText = bannerData[index].title;
+  descElement.innerText = bannerData[index].description;
+}
+
+// แสดงภาพแรก
+updateBanner(current);
+
+// เปลี่ยนภาพและข้อความทุก 3 วินาที
+setInterval(() => {
+  current = (current + 1) % bannerData.length;
+  updateBanner(current);
+}, 3000);
 
      window.addEventListener("resize", handleResize);
 
