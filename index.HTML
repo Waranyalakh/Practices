@@ -11,43 +11,44 @@
   </style>
     <body>
         <nav>
-            <div id="nav-desktop" style="justify-content: space-between">
-                <div class="" style="display: flex; justify-content: flex-start">
+            <div id="nav-desktop">
+                <div class="nav-left">
                     <a href="#" class="link">HOME</a>
                     <a href="#" class="link">BAND</a>
                     <a href="#" class="link">TOUR</a>
                     <a href="#" class="link">CONTACT</a>
                     <div class="dropdown">
-                        <a href class="link">MORE</a>
-                            <div class="dropdown-content" id="drop">
-                                <a href="#" class="link2">Merchandise</a>
-                                <a href="#" class="link2">Extras</a>
-                                <a href="#" class="link2">Media</a>
-                            </div>
+                        <a href="#" class="link">MORE</a>
+                        <div class="dropdown-content" id="drop">
+                            <a href="#" class="link2">Merchandise</a>
+                            <a href="#" class="link2">Extras</a>
+                            <a href="#" class="link2">Media</a>
+                        </div>
                     </div>
                 </div>
+
                 <!-- icon แว่นขยาย -->
-                <!-- <div id="nav-desktop" > -->
-                    <a href class="link"><svg
-                            class="w-6 h-6 text-gray-800 dark:text-white"
-                            aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="24"
-                            height="24"
-                            fill="none"
-                            viewBox="0 0 24 24">
-                            <path
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-width="2"
-                                d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z" />
-                        </svg>
-                    </a>
-                <!-- </div> -->
+                <a href="#" class="link search-icon">
+                    <svg
+                        class="w-6 h-6 text-gray-800 dark:text-white"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        fill="none"
+                        viewBox="0 0 24 24">
+                        <path
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-width="2"
+                            d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z" />
+                    </svg>
+                </a>
             </div>
+
             <!-- hamberger  -->
             <div id="nav-mobile" style="display: none">
-                <a href style="padding: 5px; color: white">
+                <a href="#" style="padding: 5px; color: white">
                     <svg
                         class="w-6 h-6 text-gray-800 dark:text-white"
                         aria-hidden="true"
@@ -61,11 +62,11 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-width="2"
-                            d="M18 6H6m12 4H6m12 4H6m12 4H6" /></svg>
+                            d="M18 6H6m12 4H6m12 4H6m12 4H6" />
+                    </svg>
                 </a>
             </div>
         </nav>
-
         <!-- div img -->
         <div>
             <img
@@ -239,7 +240,6 @@
                     <h1 class="HMF">Tickets</h1>
                 </div>
                 <form action class="modal-from">
-
                     <a href class="aMF"><svg
                             class="w-6 h-6 text-gray-800 dark:text-white"
                             aria-hidden="true"
@@ -462,25 +462,42 @@
       }
     }
 
-    // const modal = document.getElementById("myModal");
-    // const closeBtn = document.querySelector(".close");
+    window.addEventListener("load", () => {
+    handleResize();
 
-    // const buttons = document.querySelectorAll(".myBtn")
+    // Modal control
+    const modal = document.getElementById("myModal");
+    const openBtns = document.querySelectorAll(".myBtn");
+    const closeBtn = document.querySelector(".btnMF");
 
-    // for(let i = 0; i < buttons.length; i++){
-    //     buttons[i].onclick = function(){
-    //         modal.style.display = "block";
-    //     }
-    // }
-    
-    // closeBtn.onclick = function(){
-    //     modal.style.display = "none"
-    // }
+    // แสดง modal เมื่อคลิกปุ่ม .myBtn
+        openBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+            modal.style.display = "block";
+        });
+        });
+
+        // ซ่อน modal เมื่อคลิกปุ่ม Close ด้านใน
+        closeBtn.addEventListener("click", (e) => {
+        e.preventDefault(); // ป้องกันฟอร์มส่ง (หากมี)
+        modal.style.display = "none";
+        });
+
+        // ซ่อน modal เมื่อคลิกนอก modal-content
+        window.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            modal.style.display = "none";
+        }
+        });
+    });
+
+     window.addEventListener("resize", handleResize);
+
 
  
 
     window.addEventListener("load", handleResize);
 
-    window.addEventListener("resize", handleResize);
+    // window.addEventListener("resize", handleResize);
   </script>
 </html>
