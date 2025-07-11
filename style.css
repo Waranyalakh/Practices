@@ -281,21 +281,40 @@ button:hover{
 }
 
 .contact-info{
+  display: flex;
+  justify-content: space-between;
   width: 50%;
   max-width: 300px;
   padding: 40px;
   text-align: left;
+  gap: 500px;
   
 }
+
+.btn-sub{
+  margin-top: 10px;
+  
+  border: none;
+  background: black;
+  color: white;
+  padding: 10px;
+}
+
 .ul-list{
   list-style: none;
+  flex: 1;   
 }
 .con-f{
-  width: 50%;
-  max-width: 400px;
-  padding: 20px;
-  text-align: right; 
+  flex: 1;                        /* ให้ form อยู่ขวา */
+  max-width: 400px; 
 }
+.icon{
+  width: 24px;
+  height: 24px;
+}
+
+
+
 .row{
   display: flex;
   /* gap: 0px; */
@@ -310,14 +329,6 @@ button:hover{
   width: 100%;
   padding: 6px;
   box-sizing: border-box;
-}
-.btn-sub{
-  margin-top: 10px;
-  
-  border: none;
-  background: black;
-  color: white;
-  padding: 10px;
 }
 
 .cantact-con{
